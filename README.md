@@ -1,5 +1,9 @@
 # Postgrest Computed Relationships Bug
 
+> [!IMPORTANT]
+> Includes failing test for a computed relationship
+> whose name differs from the foreign table
+
 ## Repro
 
 - Install deps with `pnpm install`

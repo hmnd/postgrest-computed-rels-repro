@@ -16,3 +16,16 @@ test("computed relationships", async () => {
     hotel: Array<Pick<Tables<"hotel">, "id" | "name">>;
   }> | null>();
 });
+
+test("computed relationships with differing names", async () => {
+  const { data, error } = await supabase
+    .from("hotel")
+    .select(`id, placements(id)`);
+  if (error) {
+    // ignore
+  }
+  expectTypeOf(data).toEqualTypeOf<Array<{
+    id: number;
+    placements: Array<Pick<Tables<"placement">, "id">>;
+  }> | null>();
+});
