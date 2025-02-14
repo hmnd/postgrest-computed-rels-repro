@@ -1,0 +1,28 @@
+{
+  "name": "supabase-computed-rels-repro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest --typecheck",
+    "gentypes": "supabase gen types --local >| src/supabase-db.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "2.47.7"
+  },
+  "devDependencies": {
+    "supabase": "^2.12.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "supabase"
+    ]
+  }
+}

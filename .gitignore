@@ -1,0 +1,7 @@
+node_modules
+.pnpm*
+.env
+
+# supabase
+**/supabase/.branches
+**/supabase/.temp
